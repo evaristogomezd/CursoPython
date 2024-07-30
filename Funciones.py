@@ -59,6 +59,8 @@ def calculator():
             print("Opción no válida, por intenta de nuevo")
 
 calculator()    
+print("--------------------------------------------------------------------------------------------------------")
+print("--------------------------------------------------------------------------------------------------------")
 
 # NOTA CURIOSA
 #En Python, no estás obligado a declarar el tipo de una variable porque Python 
@@ -66,7 +68,8 @@ calculator()
 # Esto significa que el tipo de una variable se determina automáticamente en tiempo de ejecución, 
 # y no necesitas especificarlo explícitamente cuando declaras la variable.
 
-
+#---------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------
 # FUNCIONES LAMBDA Y PROGRAMACION FUNCIONAL EN PYTHON
 # lambda no cupa declar funciones
 # es una forma de hacer funcones anonimas 
@@ -91,3 +94,43 @@ even_numbers = list(filter(lambda x: x%2 == 0, numbers)) # con "filter" podemos 
 #verfiltro= filter(lambda x: x%2 == 0, numbers) # con ambda le decimos que para x siempre que dividamos entre 2 y que el RESTO sea 0
 #print(verfiltro) # se ve asi <filter object at 0x0000023E5C8EE6E0> , podemos ver que solo se guarda en memoria pero no puede ser accedido asi es por eso que tmbn neceitamos "list"
 print("Pares:", even_numbers) 
+print("--------------------------------------------------------------------------------------------------------")
+print("--------------------------------------------------------------------------------------------------------") 
+
+#---------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------
+# FUNCIONES RECURSIVAS
+# Recursividad
+def factorial(n): # Factorial de n
+    if n == 0:                          # este es nuestro caso base osea nuestro caso minimo o de origne 
+        return 1                        # en este ejemplo no resta nada solo nos da un 1
+    else:                               #este es nuestro caso recursuvi mientras no se cumpla el 0 seguiremos restando n-1
+        return n * factorial(n - 1)     # en este ejemplo si tuvieramos n=5 seria sum_numbers(5-1) osea sum_numbers(4)
+a= 5
+factorial_a = factorial(a)
+print("El factoria de", a ,"es:", factorial_a)
+
+# Fibonacci
+def fibonacci(n):                     # Sumatoria de numeros; variable "n"
+    if n == 0:                          # este es nuestro caso base osea nuestro caso minimo o de orignen 
+        return 0                        # en este ejemplo no resta nada solo es 0
+    elif n==1:
+        return 1
+    else:                               #este es nuestro caso recursuvi mientras no se cumpla el 0 seguiremos restando n-1
+        return fibonacci(n-1) + fibonacci(n-2)   # en este ejemplo si tuvieramos n=5 seria sum_numbers(5-1) osea sum_numbers(4)
+numberF = 8
+resultF = fibonacci(numberF)                 # Llamada a la función
+print("El numero de la serie de Fibonacci correspondiente a",numberF, "es :", resultF)
+
+# Suma de numeros
+def sum_numbers(n):                     # Sumatoria de numeros; variable "n"
+    if n == 0:                          # este es nuestro caso base osea nuestro caso minimo o de orignen 
+        return 0                        # en este ejemplo no resta nada solo es 0
+    else:                               #este es nuestro caso recursuvi mientras no se cumpla el 0 seguiremos restando n-1
+        return n + sum_numbers(n - 1)   # en este ejemplo si tuvieramos n=5 seria sum_numbers(5-1) osea sum_numbers(4)
+result = sum_numbers(5)                 # Llamada a la función
+print(f"Suma de los primeros 5 números es: {result}") # f-strings
+# f-strings
+#La f al principio del print se usa para indicar que es un f-string (o formatted string literal) en Python. 
+# Las f-strings se utilizan para formatear cadenas de manera fácil y legible, 
+# permitiendo incluir expresiones dentro de llaves {} que se evalúan en tiempo de ejecución. 
