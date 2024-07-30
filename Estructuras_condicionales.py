@@ -57,3 +57,42 @@ if edad >= 18:      # Si la edad es mayor o igual a 18, la persona es mayor de e
     print("La persona es mayor de edad.")
 else:               # Si la edad es menor a 18, la persona es menor de edad
     print("La persona es menor de edad.")
+
+
+#Bucles y control e Iteraciones
+#ya vimos que en la listas hay informacion  que puede ser cinsultada con la indexacion o con el slicing
+#Sin envago hay una forma de automatizar el ñroceso cuando lo quermos hacer de manera iterable
+#Para eso se utilizan lo bucles o controles de iteracion
+
+#EJEMPLO
+# en una lista [1,2,3,4,5,6,7,8,9,10]
+#Si quieo buscar infrmacion dentro tendre que moverme eir almacendo informacion para saber donde estoy
+#POS ser para la posicion
+#VAL sera para su contenido o valor
+# en la lista del ejemplo el uno esta en POS=0 pero du VAL="1"
+numbers =[0,1,2,3,4,5,6,7,8,9,10] 
+for i in numbers: #sin novedad se utiliza como un for en progra, solo no olvidemos los puntos y la identación
+    if i == 3:      # este whiel esta dentro del for
+        continue    #Lo utilizamos para saltar u omitir un paso, para eso seutiliza "continue"
+    print ("Aqui 1 es igual ", i)       #en este ejemplo podemos ver que se brinca el 3
+    #print ("Aqui 1 es igual ", i+1)    #aca como suma 1 numero a i se brinca el 4
+
+    for i in range(10):
+        print(i)
+
+    for x in range(2,9):
+        print(i)
+
+    fruits = ["manzana", "uva", "mando","naranja", "lima", "mandarina"]
+    for fruit in fruits:
+        print(fruit)    
+        if fruit == "Naranja":
+            print("naranja encontrada")
+
+    w=0
+    while  w<5: #while es un mientras y se utiliza como siempre, solo no olvidemos los : a final, si no al dar enter no hace identacion
+        if w == 3:  #se agrega una condicion como cualquier otra de if  que si se cumple
+            break   #Hace que estre break pare el while y si no hay otra isntruccion se sale
+        print(w)
+        #w = w+1
+        w +=1 # metodo abreviado de w = w +1
